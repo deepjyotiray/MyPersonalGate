@@ -1,0 +1,25 @@
+# Large files
+*.apk
+*.hprof
+*.aab
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/captures/
+
+# Backend secrets
+backend/.env
+backend/oauth-client.json
+backend/service-account.json
+backend/token.json
+backend/ananta.db
+backend/uploads/
+backend/node_modules/
+
+# IDE
+.idea/
+*.iml
+.DS_Store
