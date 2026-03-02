@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AnantaTowers.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#0d1b4b</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenIconBackgroundColor">#0d1b4b</item>
+        <item name="postSplashScreenTheme">@style/Theme.AnantaTowers</item>
+    </style>
+
+    <style name="Theme.AnantaTowers" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#ffffff</item>
+    </style>
+</resources>

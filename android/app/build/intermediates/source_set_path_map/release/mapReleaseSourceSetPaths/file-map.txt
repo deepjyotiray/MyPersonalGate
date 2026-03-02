@@ -1,0 +1,70 @@
+com.ananta.towers.app-jetified-material3-release-0 /Users/deepjyotiray/.gradle/caches/8.13/transforms/02f8a938870d9a8c16d20e387352c587/transformed/jetified-material3-release/res
+com.ananta.towers.app-jetified-ui-release-1 /Users/deepjyotiray/.gradle/caches/8.13/transforms/0491a1a6c9327c9cc34e4b868efc87e8/transformed/jetified-ui-release/res
+com.ananta.towers.app-navigation-common-ktx-2.7.7-2 /Users/deepjyotiray/.gradle/caches/8.13/transforms/0a782d72ce1332de8625aac49ed78829/transformed/navigation-common-ktx-2.7.7/res
+com.ananta.towers.app-jetified-customview-poolingcontainer-1.0.0-3 /Users/deepjyotiray/.gradle/caches/8.13/transforms/0c509a64081c1e46661ca048ab100f7f/transformed/jetified-customview-poolingcontainer-1.0.0/res
+com.ananta.towers.app-jetified-coil-base-2.6.0-4 /Users/deepjyotiray/.gradle/caches/8.13/transforms/0d04a33c33f08dd50431f967ff73426d/transformed/jetified-coil-base-2.6.0/res
+com.ananta.towers.app-jetified-lifecycle-livedata-core-ktx-2.7.0-5 /Users/deepjyotiray/.gradle/caches/8.13/transforms/20f505d63e8e6d2f53bc6c01374af70e/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/res
+com.ananta.towers.app-jetified-startup-runtime-1.1.1-6 /Users/deepjyotiray/.gradle/caches/8.13/transforms/21c0cf4d9cf6d571a1b143ac23e9daf3/transformed/jetified-startup-runtime-1.1.1/res
+com.ananta.towers.app-jetified-core-splashscreen-1.0.1-7 /Users/deepjyotiray/.gradle/caches/8.13/transforms/27376fe871bfac1a1fd0ce77573bdfec/transformed/jetified-core-splashscreen-1.0.1/res
+com.ananta.towers.app-jetified-animation-core-release-8 /Users/deepjyotiray/.gradle/caches/8.13/transforms/2c42cd64c38d143e0baf4cb1c4590538/transformed/jetified-animation-core-release/res
+com.ananta.towers.app-jetified-ui-text-release-9 /Users/deepjyotiray/.gradle/caches/8.13/transforms/2dcd633ff00f81f0b12f61cad31f78db/transformed/jetified-ui-text-release/res
+com.ananta.towers.app-jetified-lifecycle-viewmodel-ktx-2.7.0-10 /Users/deepjyotiray/.gradle/caches/8.13/transforms/2e977516c20c87367f138bd9d0695abe/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/res
+com.ananta.towers.app-appcompat-1.6.1-11 /Users/deepjyotiray/.gradle/caches/8.13/transforms/3025ca63c93764da4fed1811d7fd3fa3/transformed/appcompat-1.6.1/res
+com.ananta.towers.app-jetified-activity-ktx-1.8.2-12 /Users/deepjyotiray/.gradle/caches/8.13/transforms/30c8dfbe7d2689015839d953787dce8a/transformed/jetified-activity-ktx-1.8.2/res
+com.ananta.towers.app-jetified-play-services-basement-18.1.0-13 /Users/deepjyotiray/.gradle/caches/8.13/transforms/31192455b1ceb30e9355fb0f8352012a/transformed/jetified-play-services-basement-18.1.0/res
+com.ananta.towers.app-jetified-material-icons-core-release-14 /Users/deepjyotiray/.gradle/caches/8.13/transforms/330c55fe57c219f2a166109ce4569bdb/transformed/jetified-material-icons-core-release/res
+com.ananta.towers.app-jetified-annotation-experimental-1.4.0-15 /Users/deepjyotiray/.gradle/caches/8.13/transforms/35343001c49be85f1122d6a466c9f9b5/transformed/jetified-annotation-experimental-1.4.0/res
+com.ananta.towers.app-jetified-emoji2-1.3.0-16 /Users/deepjyotiray/.gradle/caches/8.13/transforms/3880874b8fa52e95254b1830b21191df/transformed/jetified-emoji2-1.3.0/res
+com.ananta.towers.app-jetified-emoji2-views-helper-1.3.0-17 /Users/deepjyotiray/.gradle/caches/8.13/transforms/3941665573087f99bf98a5c00d959125/transformed/jetified-emoji2-views-helper-1.3.0/res
+com.ananta.towers.app-jetified-runtime-saveable-release-18 /Users/deepjyotiray/.gradle/caches/8.13/transforms/3b364ec7a723b689d35e12f8c11f8702/transformed/jetified-runtime-saveable-release/res
+com.ananta.towers.app-jetified-runtime-release-19 /Users/deepjyotiray/.gradle/caches/8.13/transforms/40491c12fbb3ea94e0c416d63f42b6b9/transformed/jetified-runtime-release/res
+com.ananta.towers.app-jetified-foundation-release-20 /Users/deepjyotiray/.gradle/caches/8.13/transforms/404ec015af15f021730a3caa243b850d/transformed/jetified-foundation-release/res
+com.ananta.towers.app-navigation-runtime-ktx-2.7.7-21 /Users/deepjyotiray/.gradle/caches/8.13/transforms/405d40942d6b815b4daf121a728cc361/transformed/navigation-runtime-ktx-2.7.7/res
+com.ananta.towers.app-fragment-1.3.6-22 /Users/deepjyotiray/.gradle/caches/8.13/transforms/463d37717fc0ae711c06c0fa3a340eaf/transformed/fragment-1.3.6/res
+com.ananta.towers.app-jetified-ui-graphics-release-23 /Users/deepjyotiray/.gradle/caches/8.13/transforms/472724ebb0bf92c0eabace3fb1b0024e/transformed/jetified-ui-graphics-release/res
+com.ananta.towers.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-24 /Users/deepjyotiray/.gradle/caches/8.13/transforms/4ba265c66eda9343d3f5216612834243/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/res
+com.ananta.towers.app-jetified-animation-release-25 /Users/deepjyotiray/.gradle/caches/8.13/transforms/57ff25cc5842c8b1130ad7a7fad0cba9/transformed/jetified-animation-release/res
+com.ananta.towers.app-jetified-lifecycle-process-2.7.0-26 /Users/deepjyotiray/.gradle/caches/8.13/transforms/5f680247cbc82b65837edd205491285a/transformed/jetified-lifecycle-process-2.7.0/res
+com.ananta.towers.app-jetified-savedstate-ktx-1.2.1-27 /Users/deepjyotiray/.gradle/caches/8.13/transforms/6014469adcb1cd24e855273b5aa75bf4/transformed/jetified-savedstate-ktx-1.2.1/res
+com.ananta.towers.app-jetified-ui-tooling-preview-release-28 /Users/deepjyotiray/.gradle/caches/8.13/transforms/669f4a491fe26fca0ec3c5e31e31476d/transformed/jetified-ui-tooling-preview-release/res
+com.ananta.towers.app-jetified-material-icons-extended-release-29 /Users/deepjyotiray/.gradle/caches/8.13/transforms/66acf46d2001994b7779db68027321e9/transformed/jetified-material-icons-extended-release/res
+com.ananta.towers.app-jetified-lifecycle-runtime-ktx-2.7.0-30 /Users/deepjyotiray/.gradle/caches/8.13/transforms/6a989ad6c92ef6faa08a3a876246e56e/transformed/jetified-lifecycle-runtime-ktx-2.7.0/res
+com.ananta.towers.app-lifecycle-runtime-2.7.0-31 /Users/deepjyotiray/.gradle/caches/8.13/transforms/6cc2cc12901fbafbf63fc11e22231aee/transformed/lifecycle-runtime-2.7.0/res
+com.ananta.towers.app-jetified-camera-video-1.3.3-32 /Users/deepjyotiray/.gradle/caches/8.13/transforms/6ea44fd89dc090d61cc49fc6ddd50a39/transformed/jetified-camera-video-1.3.3/res
+com.ananta.towers.app-jetified-lifecycle-viewmodel-compose-2.7.0-33 /Users/deepjyotiray/.gradle/caches/8.13/transforms/71776c7a4897b31d455a9cc74ddb9bed/transformed/jetified-lifecycle-viewmodel-compose-2.7.0/res
+com.ananta.towers.app-jetified-activity-compose-1.8.2-34 /Users/deepjyotiray/.gradle/caches/8.13/transforms/71d8ca12617062f20a9eb472f954a977/transformed/jetified-activity-compose-1.8.2/res
+com.ananta.towers.app-jetified-navigation-compose-2.7.7-35 /Users/deepjyotiray/.gradle/caches/8.13/transforms/8374db072f444cf5db9adf04411c7a51/transformed/jetified-navigation-compose-2.7.7/res
+com.ananta.towers.app-jetified-core-ktx-1.12.0-36 /Users/deepjyotiray/.gradle/caches/8.13/transforms/8cd21ec94c4008d6cb9105b098c5b6b9/transformed/jetified-core-ktx-1.12.0/res
+com.ananta.towers.app-jetified-datastore-core-release-37 /Users/deepjyotiray/.gradle/caches/8.13/transforms/8d16b8f7ce8861e0250826d165c94a7a/transformed/jetified-datastore-core-release/res
+com.ananta.towers.app-jetified-camera-view-1.3.3-38 /Users/deepjyotiray/.gradle/caches/8.13/transforms/902075edb6accd5c325a5689f414d2dd/transformed/jetified-camera-view-1.3.3/res
+com.ananta.towers.app-jetified-lifecycle-runtime-compose-2.7.0-39 /Users/deepjyotiray/.gradle/caches/8.13/transforms/90bf790d745e3984b73b1bee37ac0909/transformed/jetified-lifecycle-runtime-compose-2.7.0/res
+com.ananta.towers.app-lifecycle-livedata-2.7.0-40 /Users/deepjyotiray/.gradle/caches/8.13/transforms/954f049b4ab13d736463e9f7b7ec8740/transformed/lifecycle-livedata-2.7.0/res
+com.ananta.towers.app-jetified-activity-1.8.2-41 /Users/deepjyotiray/.gradle/caches/8.13/transforms/99c40be5e3cea4a5f3b179aeca7efa7f/transformed/jetified-activity-1.8.2/res
+com.ananta.towers.app-jetified-datastore-release-42 /Users/deepjyotiray/.gradle/caches/8.13/transforms/9d4508707167fb4de17555cf656ae3b4/transformed/jetified-datastore-release/res
+com.ananta.towers.app-jetified-ui-geometry-release-43 /Users/deepjyotiray/.gradle/caches/8.13/transforms/9da149b9b74de41bab0e4e7b77897df7/transformed/jetified-ui-geometry-release/res
+com.ananta.towers.app-core-1.12.0-44 /Users/deepjyotiray/.gradle/caches/8.13/transforms/a12b4ed474a2ae7e9a0086c773340962/transformed/core-1.12.0/res
+com.ananta.towers.app-jetified-appcompat-resources-1.6.1-45 /Users/deepjyotiray/.gradle/caches/8.13/transforms/a305c0579de33b3c1275bad4e5e8acf5/transformed/jetified-appcompat-resources-1.6.1/res
+com.ananta.towers.app-jetified-play-services-base-18.1.0-46 /Users/deepjyotiray/.gradle/caches/8.13/transforms/a74b580df6e47ea0c765ca4c38aa4a63/transformed/jetified-play-services-base-18.1.0/res
+com.ananta.towers.app-jetified-savedstate-1.2.1-47 /Users/deepjyotiray/.gradle/caches/8.13/transforms/a78923eab9cc6682c0442d448cea302a/transformed/jetified-savedstate-1.2.1/res
+com.ananta.towers.app-jetified-camera-lifecycle-1.3.3-48 /Users/deepjyotiray/.gradle/caches/8.13/transforms/ac61bb95055b0e8ed751e8f1c6809aad/transformed/jetified-camera-lifecycle-1.3.3/res
+com.ananta.towers.app-jetified-datastore-preferences-release-49 /Users/deepjyotiray/.gradle/caches/8.13/transforms/ace317b7cb82bd2d047b696819598f7c/transformed/jetified-datastore-preferences-release/res
+com.ananta.towers.app-lifecycle-livedata-core-2.7.0-50 /Users/deepjyotiray/.gradle/caches/8.13/transforms/adb3ac1a7e479b67caa6390d2c2f8f09/transformed/lifecycle-livedata-core-2.7.0/res
+com.ananta.towers.app-navigation-runtime-2.7.7-51 /Users/deepjyotiray/.gradle/caches/8.13/transforms/bb2c4c776c0c29464d86f1e1757f9203/transformed/navigation-runtime-2.7.7/res
+com.ananta.towers.app-jetified-camera-core-1.3.3-52 /Users/deepjyotiray/.gradle/caches/8.13/transforms/c65a55e943c9e6f586ce6af307c3c69b/transformed/jetified-camera-core-1.3.3/res
+com.ananta.towers.app-lifecycle-viewmodel-2.7.0-53 /Users/deepjyotiray/.gradle/caches/8.13/transforms/c953d8ca24f980e58c7bef9aceeba651/transformed/lifecycle-viewmodel-2.7.0/res
+com.ananta.towers.app-navigation-common-2.7.7-54 /Users/deepjyotiray/.gradle/caches/8.13/transforms/cace4ff805d300e472efc79b51135137/transformed/navigation-common-2.7.7/res
+com.ananta.towers.app-jetified-foundation-layout-release-55 /Users/deepjyotiray/.gradle/caches/8.13/transforms/cb39386d930e01d939a20a2aae40f6dc/transformed/jetified-foundation-layout-release/res
+com.ananta.towers.app-jetified-ui-util-release-56 /Users/deepjyotiray/.gradle/caches/8.13/transforms/d15e135931de99709367ce0878a5a05f/transformed/jetified-ui-util-release/res
+com.ananta.towers.app-jetified-ui-unit-release-57 /Users/deepjyotiray/.gradle/caches/8.13/transforms/d4b27f05307dca3ab5cc68c68ed9e1d2/transformed/jetified-ui-unit-release/res
+com.ananta.towers.app-core-runtime-2.2.0-58 /Users/deepjyotiray/.gradle/caches/8.13/transforms/e55215b0bb8cd464e981afec3a2452da/transformed/core-runtime-2.2.0/res
+com.ananta.towers.app-jetified-material-ripple-release-59 /Users/deepjyotiray/.gradle/caches/8.13/transforms/f19c12e9afa26ab8a2e90181e3635a00/transformed/jetified-material-ripple-release/res
+com.ananta.towers.app-jetified-profileinstaller-1.3.1-60 /Users/deepjyotiray/.gradle/caches/8.13/transforms/f372245cefaf80e15bea575cbeea4ba1/transformed/jetified-profileinstaller-1.3.1/res
+com.ananta.towers.app-jetified-camera-camera2-1.3.3-61 /Users/deepjyotiray/.gradle/caches/8.13/transforms/ff79fe1d98fcb956d9e418f33f8ba9db/transformed/jetified-camera-camera2-1.3.3/res
+com.ananta.towers.app-pngs-62 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/build/generated/res/pngs/release
+com.ananta.towers.app-resValues-63 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/build/generated/res/resValues/release
+com.ananta.towers.app-updated_navigation_xml-64 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/build/generated/updated_navigation_xml/release
+com.ananta.towers.app-packageReleaseResources-65 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
+com.ananta.towers.app-packageReleaseResources-66 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
+com.ananta.towers.app-release-67 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/build/intermediates/merged_res/release/mergeReleaseResources
+com.ananta.towers.app-main-68 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/src/main/res
+com.ananta.towers.app-release-69 /Users/deepjyotiray/IdeaProjects/Ananta Towers/android/app/src/release/res

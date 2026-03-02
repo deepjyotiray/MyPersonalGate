@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Ananta Towers — Admin</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #1a1a1a; }
+  .screen { display: none; min-height: 100vh; }
+  .screen.active { display: flex; flex-direction: column; }
+
+  /* Login */
+  #login-screen { justify-content: center; align-items: center; padding: 32px; }
+  .login-box { width: 100%; max-width: 360px; }
+  .login-box h1 { font-size: 22px; margin-bottom: 4px; }
+  .login-box p { color: #666; font-size: 13px; margin-bottom: 28px; }
+
+  /* Top bar */
+  .topbar { background: #1a1a2e; color: #fff; padding: 16px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+  .topbar h2 { font-size: 16px; font-weight: 600; }
+  .topbar button { background: none; border: none; color: #fff; font-size: 13px; cursor: pointer; opacity: 0.8; }
+
+  /* Content */
+  .content { padding: 16px; flex: 1; }
+
+  /* Form elements */
+  label { display: block; font-size: 12px; font-weight: 600; color: #555; margin-bottom: 4px; margin-top: 14px; text-transform: uppercase; letter-spacing: 0.4px; }
+  input, select { width: 100%; padding: 11px 12px; border: 1.5px solid #ddd; border-radius: 8px; font-size: 15px; background: #fff; outline: none; transition: border-color 0.2s; }
+  input:focus, select:focus { border-color: #1a1a2e; }
+  .btn { display: block; width: 100%; padding: 13px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 20px; transition: opacity 0.2s; }
+  .btn:active { opacity: 0.8; }
+  .btn-primary { background: #1a1a2e; color: #fff; }
+  .btn-danger { background: #e53935; color: #fff; }
+  .btn-outline { background: #fff; color: #1a1a2e; border: 1.5px solid #1a1a2e; }
+  .error { color: #e53935; font-size: 13px; margin-top: 10px; min-height: 18px; }
+
+  /* User cards */
+  .user-card { background: #fff; border-radius: 10px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .user-card-header { display: flex; align-items: center; justify-content: space-between; }
+  .user-name { font-weight: 600; font-size: 15px; }
+  .user-meta { font-size: 12px; color: #888; margin-top: 2px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+  .badge-admin { background: #e3f2fd; color: #1565c0; }
+  .badge-guard { background: #e8f5e9; color: #2e7d32; }
+  .badge-superadmin { background: #fce4ec; color: #880e4f; }
+  .badge-inactive { background: #f5f5f5; color: #999; }
+  .card-actions { display: flex; gap: 8px; margin-top: 12px; }
+  .card-actions button { flex: 1; padding: 8px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1.5px solid; transition: opacity 0.2s; }
+  .card-actions button:active { opacity: 0.7; }
+  .btn-edit { border-color: #1a1a2e; color: #1a1a2e; background: #fff; }
+  .btn-toggle { border-color: #f57c00; color: #f57c00; background: #fff; }
+  .btn-del { border-color: #e53935; color: #e53935; background: #fff; }
+
+  /* FAB */
+  .fab { position: fixed; bottom: 24px; right: 24px; width: 52px; height: 52px; border-radius: 50%; background: #1a1a2e; color: #fff; font-size: 26px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; }
+
+  /* Modal */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 100; align-items: flex-end; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: #fff; border-radius: 16px 16px 0 0; padding: 24px; width: 100%; max-height: 90vh; overflow-y: auto; }
+  .modal h3 { font-size: 17px; margin-bottom: 4px; }
+  .modal-close { float: right; background: none; border: none; font-size: 22px; cursor: pointer; color: #888; margin-top: -4px; }
+
+  .tabs { display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid #eee; }
+  .tab { flex: 1; padding: 10px; text-align: center; font-size: 13px; font-weight: 600; cursor: pointer; color: #888; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+  .tab.active { color: #1a1a2e; border-bottom-color: #1a1a2e; }
+
+  .empty { text-align: center; color: #aaa; padding: 48px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen" class="screen active">
+  <div class="login-box">
+    <h1>Ananta Towers</h1>
+    <p>Admin Panel</p>
+    <label>Username</label>
+    <input id="l-username" type="text" autocomplete="username" placeholder="superadmin">
+    <label>PIN</label>
+    <input id="l-pin" type="password" inputmode="numeric" placeholder="••••">
+    <div class="error" id="l-error"></div>
+    <button class="btn btn-primary" onclick="doLogin()">Login</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main-screen" class="screen">
+  <div class="topbar">
+    <h2>User Management</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <div class="content">
+    <div class="tabs">
+      <div class="tab active" onclick="setTab('all')">All</div>
+      <div class="tab" onclick="setTab('admin')">Admins</div>
+      <div class="tab" onclick="setTab('guard')">Guards</div>
+    </div>
+    <div id="user-list"></div>
+  </div>
+  <button class="fab" onclick="openAddModal()">+</button>
+</div>
+
+<!-- ADD / EDIT MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 id="modal-title">Add User</h3>
+    <input type="hidden" id="m-id">
+    <label>Full Name</label>
+    <input id="m-name" type="text" placeholder="John Doe">
+    <label>Username</label>
+    <input id="m-username" type="text" placeholder="john_doe">
+    <label>PIN</label>
+    <input id="m-pin" type="password" inputmode="numeric" placeholder="••••">
+    <label>Role</label>
+    <select id="m-role">
+      <option value="guard">Guard</option>
+      <option value="admin" id="opt-admin">Admin</option>
+    </select>
+    <div class="error" id="m-error"></div>
+    <button class="btn btn-primary" onclick="saveUser()">Save</button>
+  </div>
+</div>
+
+<script>
+const BASE = '';
+let token = localStorage.getItem('sa_token') || '';
+let currentTab = 'all';
+let allUsers = [];
+let myRole = localStorage.getItem('sa_role') || '';
+let myUserId = localStorage.getItem('sa_uid') || '';
+
+if (token) { showMain(); loadUsers(); }
+
+async function api(method, path, body) {
+  const res = await fetch(BASE + path, {
+    method,
+    headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: 'Bearer ' + token } : {}) },
+    body: body ? JSON.stringify(body) : undefined
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+}
+
+async function doLogin() {
+  const username = document.getElementById('l-username').value.trim();
+  const pin = document.getElementById('l-pin').value.trim();
+  document.getElementById('l-error').textContent = '';
+  try {
+    const data = await api('POST', '/login', { username, pin });
+    if (data.role !== 'superadmin' && data.role !== 'admin') throw new Error('Not an admin account');
+    token = data.token;
+    myRole = data.role;
+    myUserId = String(JSON.parse(atob(data.token.split('.')[1])).userId);
+    localStorage.setItem('sa_token', token);
+    localStorage.setItem('sa_role', myRole);
+    localStorage.setItem('sa_uid', myUserId);
+    showMain();
+    loadUsers();
+  } catch (e) {
+    document.getElementById('l-error').textContent = e.message;
+  }
+}
+
+function logout() {
+  token = '';
+  myRole = '';
+  myUserId = '';
+  localStorage.removeItem('sa_token');
+  localStorage.removeItem('sa_role');
+  localStorage.removeItem('sa_uid');
+  document.getElementById('main-screen').classList.remove('active');
+  document.getElementById('login-screen').classList.add('active');
+  document.getElementById('l-pin').value = '';
+}
+
+function showMain() {
+  document.getElementById('login-screen').classList.remove('active');
+  document.getElementById('main-screen').classList.add('active');
+}
+
+async function loadUsers() {
+  try {
+    allUsers = await api('GET', '/users');
+    renderUsers();
+  } catch (e) {
+    if (e.message.includes('401') || e.message.includes('403')) logout();
+  }
+}
+
+function setTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.toggle('active', ['all','admin','guard'][i] === tab);
+  });
+  renderUsers();
+}
+
+function renderUsers() {
+  const filtered = allUsers.filter(u => {
+    if (u.role === 'superadmin') return currentTab === 'all' && myRole === 'superadmin';
+    if (currentTab === 'all') return true;
+    return u.role === currentTab;
+  });
+  const el = document.getElementById('user-list');
+  if (!filtered.length) { el.innerHTML = '<div class="empty">No users found</div>'; return; }
+  el.innerHTML = filtered.map(u => {
+    const isSuperadmin = u.role === 'superadmin';
+    const isSelf = String(u.id) === myUserId;
+    const canAct = !isSuperadmin;
+    const canDeactivate = canAct && !isSelf;
+    return `
+    <div class="user-card">
+      <div class="user-card-header">
+        <div>
+          <div class="user-name">${u.name}${isSelf ? ' <span style="font-size:11px;color:#888">(you)</span>' : ''}</div>
+          <div class="user-meta">@${u.username}</div>
+        </div>
+        <span class="badge ${u.is_active ? 'badge-' + u.role : 'badge-inactive'}">${u.is_active ? u.role : 'inactive'}</span>
+      </div>
+      ${canAct ? `<div class="card-actions">
+        <button class="btn-edit" onclick="openEditModal(${u.id})">Edit / Reset PIN</button>
+        ${canDeactivate ? `<button class="btn-toggle" onclick="toggleActive(${u.id}, ${u.is_active})">${u.is_active ? 'Deactivate' : 'Activate'}</button>` : ''}
+      </div>` : ''}
+    </div>
+  `}).join('');
+}
+
+function openAddModal() {
+  document.getElementById('modal-title').textContent = 'Add User';
+  document.getElementById('m-id').value = '';
+  document.getElementById('m-name').value = '';
+  document.getElementById('m-username').value = '';
+  document.getElementById('m-pin').value = '';
+  document.getElementById('m-role').value = 'guard';
+  document.getElementById('m-username').disabled = false;
+  document.getElementById('m-error').textContent = '';
+  document.getElementById('opt-admin').style.display = myRole === 'superadmin' ? '' : 'none';
+  document.getElementById('modal').classList.add('open');
+}
+
+function openEditModal(id) {
+  const u = allUsers.find(x => x.id === id);
+  if (!u) return;
+  document.getElementById('modal-title').textContent = 'Edit User';
+  document.getElementById('m-id').value = u.id;
+  document.getElementById('m-name').value = u.name;
+  document.getElementById('m-username').value = u.username;
+  document.getElementById('m-username').disabled = false;
+  document.getElementById('m-pin').value = '';
+  document.getElementById('m-error').textContent = '';
+  document.getElementById('opt-admin').style.display = myRole === 'superadmin' ? '' : 'none';
+  document.getElementById('m-role').value = u.role;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+}
+
+async function saveUser() {
+  const id = document.getElementById('m-id').value;
+  const name = document.getElementById('m-name').value.trim();
+  const username = document.getElementById('m-username').value.trim();
+  const pin = document.getElementById('m-pin').value.trim();
+  const role = document.getElementById('m-role').value;
+  document.getElementById('m-error').textContent = '';
+  try {
+    if (id) {
+      const body = { name, role, username };
+      if (pin) body.pin = pin;
+      await api('PATCH', '/users/' + id, body);
+    } else {
+      if (!name || !username || !pin) throw new Error('All fields required');
+      await api('POST', '/users', { name, username, pin, role });
+    }
+    closeModal();
+    loadUsers();
+  } catch (e) {
+    document.getElementById('m-error').textContent = e.message;
+  }
+}
+
+async function toggleActive(id, isActive) {
+  try {
+    await api('PATCH', '/users/' + id, { is_active: !isActive });
+    loadUsers();
+  } catch (e) { alert(e.message); }
+}
+
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal')) closeModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    if (document.getElementById('login-screen').classList.contains('active')) doLogin();
+  }
+});
+</script>
+</body>
+</html>

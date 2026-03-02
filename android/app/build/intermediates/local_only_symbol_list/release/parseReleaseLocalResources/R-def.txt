@@ -1,0 +1,8 @@
+R_DEF: Internal format may change without notice
+local
+drawable logo
+mipmap ic_launcher
+mipmap ic_launcher_round
+style Theme.AnantaTowers
+style Theme.AnantaTowers.Splash
+xml file_paths
